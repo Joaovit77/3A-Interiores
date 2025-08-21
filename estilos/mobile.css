@@ -1,0 +1,78 @@
+
+
+header{
+    padding: 0px;
+}
+
+header, header > nav{
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+header img#imagem{
+    margin-top: 15px;
+}
+
+header > h1{
+    flex-basis: 50px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+header > nav > a{
+    margin: 0;
+    border-radius: 0;
+    border-top: 1px solid gray;
+}
+
+
+span#burguer{
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+main{
+    margin-top: 0;
+    padding-bottom: 40px;
+    flex-flow: column;
+}
+
+
+.menu-item .contato{
+    border-radius: 0 0 5px 5px;
+}
+
+.submenu{
+    text-align: center;
+    border: 1px solid brown;
+    
+}
+
+section{
+    border-radius: 0;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section h2{
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+
+
+section p{
+    margin-top: 20px;
+    width: 80%;
+}
+
+
+
+footer{
+    margin: 20px auto 0px auto;
+}

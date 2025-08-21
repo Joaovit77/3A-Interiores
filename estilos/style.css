@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JBcursive';
+    src: url('../font/JBCursive.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../font/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../font/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-1:#2B0303;
+    --cor-2:#590606;
+    --cor-3:#2B031B;
+    --cor-4:#700808;
+    --cor-5:#DAA520;
+    --cor-6:#F5F5F5;
+    --cor-7:#A6A6A6;
+
+    --font-cursive: 'JBcursive';
+    --font-bebas: 'BebasNeue';
+    --font-great: 'GreatVibes';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1rem;
+    background:var(--cor-1) url('../imagens/background.jpg') no-repeat ;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+header{
+    background-color: var(--cor-2);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header  img#imagem{
+    border-radius: 50%;
+    background-color: brown;
+    padding: 5px;
+    cursor: pointer;
+}
+
+header  img#imagem:hover{
+    transform: scale(1.2) rotate(5deg);
+    transition: transform 0.7s;
+}
+
+span#burguer{
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+    background-color: var(--cor-1);
+    text-align: center;
+    display: none;
+}
+
+header > h1{
+    /*border: 1px dotted black; */
+    flex: 0 0 200px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 400;
+}
+
+header > nav{
+    /*border: 1px dotted black;
+    */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    transition: transform 0.4s ease;
+}
+
+nav#itens > a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    padding: 10px;
+    background-color: var(--cor-4);
+    font-weight: 300;
+    text-align: center;
+}
+
+
+
+span#burguer:hover{
+    background-color: brown;
+    transition: background-color 0.5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+    cursor: pointer;
+}
+nav#itens > a:hover, #itens .contato:hover{
+    background-color: brown;
+    transition: background-color 0.5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.menu-item{
+    position: relative;
+}
+
+
+
+@keyframes fadeDown{
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+section{
+    background-color: rgb(100, 0, 0);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+section h2{
+    font-family: var(--font-bebas);
+    font-size: 2.3rem;    
+    font-weight: 300;
+    text-align: center;
+    padding-right:5px;
+    padding-left:5px ;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+    border-top-left-radius:5px ;
+    border-top-right-radius: 5px;
+    width: 100%;
+    padding: 3px;
+}
+
+section p{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.377);
+    padding: 5px 10px 10px 10px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
+}
+
+#social:hover{
+    background-image:linear-gradient(to left, brown, rgba(165, 42, 42, 0.466));
+    transition: background-image 0.3s;
+    cursor: pointer;
+}
+
+main h3{
+    font-size: 1.6rem;
+    font-family: var(--font-great);
+    font-weight: 300;
+    background-color: var(--cor-5);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px #daa52083;
+    border: 1px dashed black;
+}
+
+.menu-item a.contato{
+    display: block;
+    width: 100px;
+    background-color: var(--cor-4);
+    font-size: 1.1rem;  
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+.menu-item a.contato:hover{
+    background-color: brown;
+}
+
+
+.submenu{
+    display: none;
+    position: absolute;
+    top: -10%;
+    left: 110%;
+    background-color: var(--cor-4);
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+}
+
+.submenu > a{
+    display: block;
+    padding: 8px 10px;
+    margin: 0;
+    border-radius: 0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.submenu a:hover{
+    background-color: brown;
+    
+}
+
+.submenu.ativo{
+    display: block;
+    animation: fadeDown 0.3s ease;
+}
+
+#imagemDiv{
+    margin: 20px 0px;
+    background-color: #700808;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px black;
+}
+
+img#imagemLua{
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+
+footer{
+    background-color: brown;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 40px;
+    width: 50%;
+}

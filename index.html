@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3A Interiores | Design de Interiores</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mobile.css" media="screen and (max-width: 700px)">
+    <link rel="stylesheet" href="estilos/TelasG.css" media="screen and (min-width: 700px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"/>
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <span>
+            <img id="imagem" src="imagens/3A-interiores.jpg" alt="logotipo" width="100px">
+        </span>
+        <h1>3A Interiores</h1>
+        <span id="burguer" class="material-symbols-outlined">menu</span>
+        <nav id="itens">
+            <a id="item1" href="#">Sobre Nós</a>
+            <a id="item2" href="#">Projetos</a>
+            <a id="item3" href="#">Redes Sociais</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Transformando espaços em ambientes únicos</h2>
+            <p><strong>3A Interiores</strong> é uma empresa de Design de Interiores, criada pela Designer <strong>Luísa Amélia De Albuquerque</strong>, que  atua na criação de projetos residências no planejamento de <strong>mobiliários</strong>, com objetivo de entregar funcionalidade, projetos únicos e designes que contam histórias. Contudo, o studio ainda conta com, uma loja de criação e vendas de artigos de decoração, para você deixar seu ambiente ainda mais parecido com você.</p>
+
+            <p>Na Interiores, acreditamos que cada ambiente deve refletir a identidade e o estilo de quem vive nele. Por isso, cada projeto é pensado com cuidado, unindo estética, conforto e praticidade. Nosso compromisso é transformar espaços em lares acolhedores e cheios de personalidade, sempre valorizando os detalhes que fazem a diferença.</p>
+
+            <p>
+            Além dos projetos personalizados, em nossa loja de decoração você encontra peças exclusivas e criativas, cuidadosamente selecionadas para complementar seu espaço. Desde pequenos artigos até itens de destaque, tudo é pensado para traduzir a essência do design em cada canto da sua casa.   
+            </p>
+            <p>
+            Seja para reformar, renovar ou decorar, a Interiores está pronta para criar ambientes que contam a sua história e tornam o seu dia a dia mais agradável, funcional e inspirador.  
+            </p>
+        </section>
+        <h3>Criadora 3a Interiores</h3>
+        <div id="imagemDiv">
+            <img id="imagemLua" src="imagens/foto-Luisa.jpg" alt="foto-donaDoSite" width="150px">
+        </div>
+        
+        <div class="menu-item">
+            <a href="#" class="contato" onclick="toggleSubmenu(event)">Contato▾</a>
+            <div class="submenu" id="submenu">
+                <a href="mailto:exemplo@email.com" target="_blank">E-mail &#128231;</a>
+                <a href="https://wa.me/5548999999999" target="_blank">WhatsApp &#128241;</a>
+        </div> 
+
+
+    </main>
+
+    <footer><p>&copy; 2025 3A Interiores. Desenvolvido por João Vitor</p></footer>
+
+    <script>
+        let burguer = window.document.getElementById('burguer');
+        let item = document.getElementById('itens');
+        burguer.addEventListener('click' , clickMenu);
+        function clickMenu(){
+            if (item.style.display == 'flex'){
+                item.style.display = 'none'
+            } else {
+                item.style.display = 'flex'
+            }
+        }
+
+        function mudouTamanho() {
+        if (window.innerWidth > 580) {
+            item.style.display = 'flex';
+        } else {
+        item.style.display = 'none';
+        }
+        }
+
+        function toggleSubmenu(e){
+            e.preventDefault();
+            let submenu = document.getElementById('submenu');
+            submenu.classList.toggle('ativo')
+        }
+
+    </script>
+</body>
+</html>

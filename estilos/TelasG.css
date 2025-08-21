@@ -1,0 +1,98 @@
+
+section{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 40px;        
+}
+
+section h2{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+section p {
+    flex-basis: 280px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+header{
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+
+header img#imagem{
+    width: 130px;
+}
+
+header h1{
+    font-size: 2.5rem;
+    flex-basis: 300px;
+}
+
+nav#itens{
+    width: 220px;
+    background-color: #a6a6a667;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.548);
+}
+
+nav#itens > a{
+    width: 100%;
+    margin: 3px auto 3px auto;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.589);
+}
+
+.submenu{
+    text-align: center;
+    margin-left: 10px;
+    top: -50%;
+    left: 100%;
+    width: 150px;
+}
+
+.submenu a{
+    padding: 10px;
+}
+
+.submenu a:hover{
+    text-decoration: underline;
+}
+
+main{
+    flex-flow: column wrap;
+}
+
+
+section{
+    display: flex;
+    max-width: 800px;
+    transition: max-width 0.7s;
+}
+
+section p{
+    flex-basis: 220px;
+    margin-right: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section p > strong{
+    font-size: 0.9rem;
+}
+
+section p:hover{
+    transform: translateY(-4px);
+    transition: transform 0.3s;
+    box-shadow: 3px 3px 3px rgba(165, 42, 42, 0.555);
+}
+
+footer{
+    
+    margin: 40px auto 0px auto;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.356);
+}
