@@ -1,0 +1,48 @@
+
+
+main h1{
+    padding-top: 30px;
+}
+
+main#periferico{
+    max-width: 800px;
+    flex-flow: row wrap;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 10px 0px 10px;
+}
+
+
+div.projetos{
+    flex: auto;
+}
+
+div.projetos h2{
+    font-size: 2rem;
+}
+
+div.projetos img{
+    width: 450px;
+    height: 270px;
+}
+
+
+main a{
+    width: 50%;
+}
+
+
+
+@media screen and (min-width:800px) {
+    div.projetos{
+        margin-top: 15px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px black;
+    }
+
+    div.projetos img{
+        border-radius: 10px;
+    }
+}

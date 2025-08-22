@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+body{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, var(--cor-3), var(--cor-2));
+    animation: fadeIn 2s ease-in;
+    box-shadow: inset 10px 5px 7px rgba(0, 0, 0, 0.39);
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+main#periferico{
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+
+main#periferico h1{
+    font-family: var(--font-bebas);
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.514);
+    font-size: 7vw;
+}
+
+
+div.projetos{
+    padding: 10px 10px 20px 10px;
+    background-color: rgba(255, 255, 255, 0.445);
+    width: 100%;
+    gap: 10px;
+}
+
+div.projetos h2{
+    font-size: 1.1rem;
+    text-align: center;
+    font-family:  var(--font-bebas);
+    font-weight: 300;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.342);
+}
+
+div.projetos img{
+    display: block;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    transition: all 1s ease;
+}
+
+.imgOn{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.2s ease-in;
+    overflow: hidden;
+}
+
+.imgOn:nth-child(odd){
+    transform: translateX(-50px);
+}
+
+.imgOn:nth-child(even){
+    transform: translateX(50px);
+}
+
+.imgOn.visivel{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+div.projetos:nth-child(odd){
+    background-color: transparent;
+    color: white;
+ }
+ 
+div.projetos:nth-child(even){
+    background-color: brown;
+    color: white;
+}
+ 
+main a{
+    background-color: rgb(42, 165, 108);
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+main a:focus{
+    background-color: red;
+}

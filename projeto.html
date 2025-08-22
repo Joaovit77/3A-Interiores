@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3A Interiores | Projetos</title>
+    <link rel="stylesheet" href="estilos-projetos/style.css">
+    <link rel="stylesheet" href="estilos-principal/style.css">
+    <link rel="stylesheet" href="estilos-projetos/telasG.css" media="screen and (min-width: 700px)">
+</head>
+<body>
+    <main id="periferico">
+        <h1>Projetos</h1>
+        <div class="projetos">
+            <h2>Cozinha Estilo Contemporâneo Biofílico </h2>
+            <img class="imgOn" src="imagens/projetos/projeto1.jpeg" alt="cozinha" width="300px">
+        </div>
+        <div class="projetos">
+            <h2>Modernismo Funcional</h2>
+            <img class="imgOn" src="imagens/projetos/projeto2.jpeg" alt="escritorio" width="300px">
+        </div>
+        <div class="projetos">
+            <h2>Quarto Contemporâneo Minimalista </h2>
+            <img class="imgOn" src="imagens/projetos/projeto3..jpeg" alt="quarto" width="300px">
+        </div>
+        <div class="projetos">
+            <h2>Banheiro Contemporâneo Sofisticado</h2>
+            <img class="imgOn" src="imagens/projetos/projeto4.jpeg" alt="banheiro" width="300px">
+        </div>
+
+        <a id="voltar" href="index.html">Voltar</a>
+    </section>
+
+
+    <script>
+        const cxImagem = document.querySelectorAll('.imgOn')
+
+        function mostrarAoScroll(){
+            cxImagem.forEach(caixa => {
+                const posicaoTopo = caixa.getBoundingClientRect().top;
+                const posicaoBaixo = caixa.getBoundingClientRect().bottom;
+                const alturaTela = window.innerHeight;
+
+
+                if (posicaoTopo < alturaTela - 50 && posicaoBaixo > 50){
+                    caixa.classList.add("visivel")
+                } else {
+                    caixa.classList.remove("visivel")
+                }
+            });
+        }
+
+        window.addEventListener('scroll', mostrarAoScroll);
+
+    </script>
+</body>
+</html>

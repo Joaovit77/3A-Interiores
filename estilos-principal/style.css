@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: 'BebasNeue';
-    src: url('../font/BebasNeue-Regular.ttf') format('truetype');
+    src: url('font/BebasNeue-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('../font/greatvibes-regular-webfont.woff2') format('woff2'),
-        url('../font/greatvibes-regular-webfont.woff') format('woff');
+    src: url('font/greatvibes-regular-webfont.woff') format('woff2'),
+        url('font/greatvibes-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -226,7 +226,7 @@ main h3:hover{
 .cxlateral{
     opacity: 0;
     transform: translateX(-50px);
-    transition: all 1.2s ease-out;
+    transition: all 1.2s ease-in;
     font-size: 16px;
     overflow: hidden;
 }
