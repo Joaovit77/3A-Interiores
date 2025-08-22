@@ -37,7 +37,6 @@
     --cor-5:#DAA520;
     --cor-6:#F5F5F5;
     --cor-7:#A6A6A6;
-
     --font-cursive: 'JBcursive';
     --font-bebas: 'BebasNeue';
     --font-great: 'GreatVibes';
@@ -49,11 +48,9 @@ html{
 
 body{
     font-size: 1rem;
-    background:var(--cor-1) url('../imagens/background.jpg') no-repeat ;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    animation: fadeIn 1s ease-in;
+    background-image: linear-gradient(to right, var(--cor-3), var(--cor-2));
+    animation: fadeIn 2s ease-in;
+    box-shadow: inset 10px 5px 7px rgba(0, 0, 0, 0.39);
 }
 
 @keyframes fadeIn{
@@ -62,7 +59,7 @@ body{
 }
 
 header{
-    background-color: var(--cor-2);
+    background-image: linear-gradient(to bottom, var(--cor-2), var(--cor-1));
     color: white;
     padding: 10px;
     display: flex;
@@ -83,21 +80,17 @@ header  img#imagem:hover{
     transition: transform 0.7s;
 }
 
-span#burguer{
-    font-size: 2rem;
-    text-shadow: 1px 1px 1px black;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
-    background-color: var(--cor-1);
-    text-align: center;
-    display: none;
-}
-
 header > h1{
     /*border: 1px dotted black; */
     flex: 0 0 200px;
     text-align: center;
     text-shadow: 1px 1px 1px black;
     font-weight: 400;
+}
+
+
+header > h1 > abbr{
+    text-decoration: none;
 }
 
 header > nav{
@@ -120,10 +113,16 @@ nav#itens > a{
     text-align: center;
 }
 
-
+span#burguer{
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+    background-color:var(--cor-1);
+    text-align: center;
+    display: none;
+}
 
 span#burguer:hover{
-    background-color: brown;
     transition: background-color 0.5s;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
     cursor: pointer;
@@ -194,10 +193,14 @@ section p{
     line-height: 1.4rem;
     color: white;
     background-color: rgba(255, 255, 255, 0.377);
-    padding: 5px 10px 10px 10px;
+    padding: 10px;
     border: 2px solid black;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
+}
+
+section p > strong{
+    font-size: 0.9rem;
 }
 
 #social:hover{

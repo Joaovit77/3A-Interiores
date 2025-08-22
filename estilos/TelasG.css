@@ -69,21 +69,23 @@ main{
 
 section{
     display: flex;
-    max-width: 800px;
+    max-width: 900px;
     transition: max-width 0.7s;
+    
 }
 
 section p{
-    flex-basis: 220px;
+    flex-basis: 250px;
+    height: auto;
     margin-right: 10px;
-    gap: 10px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
-section p > strong{
-    font-size: 0.9rem;
-}
+
 
 section p:hover{
     transform: translateY(-4px);
