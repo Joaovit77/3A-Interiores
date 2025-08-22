@@ -1,13 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'JBcursive';
-    src: url('../font/JBCursive.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'BebasNeue';
     src: url('../font/BebasNeue-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -16,9 +9,11 @@
 
 @font-face {
     font-family: 'GreatVibes';
-    src: url('../font/GreatVibes-Regular.ttf') format('truetype');
+    src: url('../font/greatvibes-regular-webfont.woff2') format('woff2'),
+        url('../font/greatvibes-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 
