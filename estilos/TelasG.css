@@ -86,11 +86,8 @@ section p{
 }
 
 
-
-section p:hover{
-    transform: translateY(-4px);
-    transition: transform 0.3s;
-    box-shadow: 3px 3px 3px rgba(165, 42, 42, 0.555);
+.cxlateral{
+    transition: all 1.5s ease-out;
 }
 
 footer{

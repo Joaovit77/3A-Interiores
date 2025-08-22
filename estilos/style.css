@@ -198,15 +198,15 @@ section p{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.404);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
 }
+section p:hover{
+    transform: translateY(-4px);
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 3px 3px 3px rgba(165, 42, 42, 0.555);
+}
 
 section p > strong{
     font-size: 0.9rem;
-}
-
-#social:hover{
-    background-image:linear-gradient(to left, brown, rgba(165, 42, 42, 0.466));
-    transition: background-image 0.3s;
-    cursor: pointer;
 }
 
 main h3{
@@ -218,6 +218,36 @@ main h3{
     border-radius: 5px;
     box-shadow: 1px 2px 2px #daa52083;
     border: 1px dashed black;
+}
+
+
+main h3:hover{
+    background-color: #ffb700;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.493) ;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.cxlateral{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.2s ease-out;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.cxlateral:nth-child(odd){
+    transform: translateX(-50px);
+}
+
+.cxlateral:nth-child(even){
+    transform: translateX(50px);
+}
+
+
+.cxlateral.visivel{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .menu-item a.contato{
@@ -277,6 +307,14 @@ main h3{
     border-radius: 50%;
     box-shadow: 1px 1px 1px black;
 }
+
+#imagemDiv:hover{
+    transform: scale(1.1) rotate(5deg);
+    transition: transform 1s;
+    box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.377);
+    cursor: pointer;
+}
+
 
 img#imagemLua{
     border-radius: 50%;

@@ -1,4 +1,7 @@
 
+body{
+   overflow-x: hidden;
+}
 
 header{
     padding: 0px;
@@ -72,27 +75,7 @@ section p{
     width: 80%;
 }
 
-.cxlateral{
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1.2s ease-out;
-    font-size: 16px;
-    overflow: hidden;
-}
 
-.cxlateral:nth-child(odd){
-    transform: translateX(-100px);
-}
-
-.cxlateral:nth-child(even){
-    transform: translateX(100px);
-}
-
-
-.cxlateral.visivel{
-    opacity: 1;
-    transform: translateX(0);
-}
 
 footer{
     margin: 20px auto 0px auto;
