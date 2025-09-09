@@ -29,7 +29,7 @@ main#periferico{
 main#periferico h1{
     font-family: var(--font-bebas);
     font-weight: 300;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.329);
     font-size: 7vw;
 }
 
