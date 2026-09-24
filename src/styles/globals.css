@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/*
+ * Tokens PROVISÓRIOS (C1/B2).
+ * Direção mínima: fundo claro, neutros e bege, rosa muito suave como acento.
+ * Serão substituídos pela identidade definida no C2. Não tratar como identidade final.
+ */
+@theme {
+  --color-paper: #f7f4f0;
+  --color-surface: #ffffff;
+  --color-sand: #efe8df;
+  --color-sand-strong: #e2d6c8;
+  --color-rose: #efdfd9;
+  --color-ink: #2a2522;
+  --color-ink-soft: #625953;
+  --color-line: #dcd2c7;
+  --color-danger: #9b2c2c;
+
+  --font-display:
+    var(--font-display-face), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-body-face), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1rem;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
