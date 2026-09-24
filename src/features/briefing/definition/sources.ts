@@ -1,0 +1,151 @@
+/**
+ * Registro dos itens do briefing original (fonte do checkpoint B1).
+ *
+ * Todo item precisa ter destino no fluxo novo, a não ser os marcados como
+ * retirados com aprovação. O teste `tests/unit/briefing/traceability.test.ts`
+ * garante isso.
+ */
+
+export interface SourceItem {
+  id: string;
+  section: string;
+  text: string;
+  /** Retirado do fluxo com aprovação da Luísa (motivo registrado). */
+  removed?: string;
+}
+
+export const SOURCES: SourceItem[] = [
+  { id: "O01", section: "Perfil dos moradores", text: "nome do(s) cliente(s)" },
+  {
+    id: "O02",
+    section: "Perfil dos moradores",
+    text: "quantidade de moradores",
+  },
+  { id: "O03", section: "Perfil dos moradores", text: "idades" },
+  {
+    id: "O04",
+    section: "Perfil dos moradores",
+    text: "sexos",
+    removed:
+      "Retirado do fluxo com aprovação: sem utilidade clara para o projeto.",
+  },
+  { id: "O05", section: "Perfil dos moradores", text: "profissões" },
+  { id: "O06", section: "Perfil dos moradores", text: "estado civil" },
+  { id: "O07", section: "Perfil dos moradores", text: "altura" },
+  {
+    id: "O08",
+    section: "Perfil dos moradores",
+    text: "informações de contato",
+  },
+  {
+    id: "O09",
+    section: "Perfil dos moradores",
+    text: "cidade de origem e relação emocional com o lugar",
+  },
+  { id: "O10", section: "Perfil dos moradores", text: "estilo de vida" },
+  { id: "O11", section: "Perfil dos moradores", text: "dinâmica familiar" },
+  { id: "O12", section: "Perfil dos moradores", text: "empregados" },
+  { id: "O13", section: "Perfil dos moradores", text: "animais de estimação" },
+  { id: "O14", section: "Imóvel", text: "tipo de residência" },
+  { id: "O15", section: "Imóvel", text: "endereço/localização" },
+  { id: "O16", section: "Imóvel", text: "planta baixa ou metragem" },
+  { id: "O17", section: "Imóvel", text: "imóvel próprio ou alugado" },
+  { id: "O18", section: "Imóvel", text: "idade do imóvel" },
+  { id: "O19", section: "Imóvel", text: "infraestrutura existente" },
+  { id: "O20", section: "Imóvel", text: "itens que serão mantidos" },
+  { id: "O21", section: "Imóvel", text: "itens que serão eliminados" },
+  { id: "O22", section: "Necessidades", text: "número de quartos" },
+  { id: "O23", section: "Necessidades", text: "áreas de estar" },
+  { id: "O24", section: "Necessidades", text: "espaços de trabalho" },
+  { id: "O25", section: "Necessidades", text: "refeições" },
+  { id: "O26", section: "Necessidades", text: "necessidades funcionais" },
+  { id: "O27", section: "Necessidades", text: "acessibilidade" },
+  { id: "O28", section: "Necessidades", text: "necessidades especiais" },
+  { id: "O29", section: "Preferências estéticas", text: "estilo desejado" },
+  { id: "O30", section: "Preferências estéticas", text: "atmosfera" },
+  { id: "O31", section: "Preferências estéticas", text: "cores" },
+  { id: "O32", section: "Preferências estéticas", text: "materiais" },
+  { id: "O33", section: "Preferências estéticas", text: "mobiliário" },
+  { id: "O34", section: "Preferências estéticas", text: "objetos afetivos" },
+  { id: "O35", section: "Preferências estéticas", text: "plantas" },
+  {
+    id: "O36",
+    section: "Preferências estéticas",
+    text: "Referências visuais, como fotos ou imagens de ambientes que o cliente admira…",
+  },
+  {
+    id: "O36b",
+    section: "Preferências estéticas",
+    text: "Referências visuais, como fotos ou imagens de ambientes que o cliente admira… (repetição exata)",
+  },
+  { id: "O37", section: "Sala", text: "quantidade de usuários" },
+  { id: "O38", section: "Sala", text: "frequência de uso" },
+  { id: "O39", section: "Sala", text: "visitas" },
+  { id: "O40", section: "Sala", text: "refeições" },
+  { id: "O41", section: "Sala", text: "livros" },
+  { id: "O42", section: "Sala", text: "estudo/trabalho" },
+  { id: "O43", section: "Sala", text: "objetos afetivos" },
+  { id: "O44", section: "Sala", text: "cores" },
+  { id: "O45", section: "Sala", text: "rack/painel/estante" },
+  { id: "O46", section: "Sala", text: "iluminação" },
+  { id: "O47", section: "Sala", text: "TV e eletrônicos" },
+  { id: "O48", section: "Sala", text: "tapetes" },
+  { id: "O49", section: "Sala", text: "plantas" },
+  { id: "O50", section: "Sala", text: "persianas" },
+  { id: "O51", section: "Sala", text: "acessibilidade" },
+  { id: "O52", section: "Sala", text: "alturas especiais" },
+  { id: "O53", section: "Cozinha", text: "frequência de uso" },
+  { id: "O54", section: "Cozinha", text: "refeições" },
+  { id: "O55", section: "Cozinha", text: "cozinha aberta/fechada" },
+  { id: "O56", section: "Cozinha", text: "armazenamento" },
+  { id: "O57", section: "Cozinha", text: "eletroportáteis" },
+  { id: "O58", section: "Cozinha", text: "bebidas" },
+  { id: "O59", section: "Cozinha", text: "mantimentos" },
+  { id: "O60", section: "Cozinha", text: "cores" },
+  { id: "O61", section: "Cozinha", text: "prioridades" },
+  { id: "O62", section: "Cozinha", text: "eletrodomésticos" },
+  { id: "O63", section: "Cozinha", text: "dimensões" },
+  { id: "O64", section: "Cozinha", text: "iluminação" },
+  { id: "O65", section: "Cozinha", text: "antiderrapantes" },
+  { id: "O66", section: "Cozinha", text: "integração com sala" },
+  { id: "O67", section: "Banheiro", text: "usuários" },
+  { id: "O68", section: "Banheiro", text: "maquiagem/barbear" },
+  { id: "O69", section: "Banheiro", text: "armazenamento" },
+  { id: "O70", section: "Banheiro", text: "tulha" },
+  { id: "O71", section: "Banheiro", text: "gavetões" },
+  { id: "O72", section: "Banheiro", text: "prateleiras" },
+  { id: "O73", section: "Banheiro", text: "cores" },
+  { id: "O74", section: "Banheiro", text: "espelho" },
+  { id: "O75", section: "Banheiro", text: "iluminação" },
+  { id: "O76", section: "Banheiro", text: "metais" },
+  { id: "O77", section: "Banheiro", text: "barras de apoio" },
+  { id: "O78", section: "Banheiro", text: "acessibilidade" },
+  { id: "O79", section: "Banheiro", text: "abertura da porta" },
+  {
+    id: "O80",
+    section: "Sustentabilidade e hábitos",
+    text: "materiais sustentáveis",
+  },
+  { id: "O81", section: "Sustentabilidade e hábitos", text: "coleta seletiva" },
+  { id: "O82", section: "Sustentabilidade e hábitos", text: "compostagem" },
+  {
+    id: "O83",
+    section: "Sustentabilidade e hábitos",
+    text: "reaproveitamento de água",
+  },
+  {
+    id: "O84",
+    section: "Sustentabilidade e hábitos",
+    text: "hábitos alimentares mencionados no briefing",
+  },
+  { id: "O85", section: "Projeto", text: "orçamento" },
+  {
+    id: "O86",
+    section: "Projeto",
+    text: "restrições financeiras/regulatórias",
+  },
+  { id: "O87", section: "Projeto", text: "prazo" },
+  { id: "O88", section: "Projeto", text: "eventos que afetem o cronograma" },
+  { id: "O89", section: "Projeto", text: "informações adicionais" },
+  { id: "O90", section: "Projeto", text: "necessidades específicas" },
+];

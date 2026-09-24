@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { siteConfig } from "@/lib/site";
 
 export default function Home() {
@@ -11,6 +13,14 @@ export default function Home() {
       </h1>
       <p className="max-w-prose text-lg text-ink-soft">
         Portfólio em construção.
+      </p>
+      <p>
+        <Link
+          href="/briefing"
+          className="text-base font-medium underline underline-offset-4"
+        >
+          Protótipo do briefing
+        </Link>
       </p>
     </main>
   );

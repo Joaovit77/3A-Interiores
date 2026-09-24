@@ -29,6 +29,11 @@ npm run build
 npm run test:e2e     # Playwright contra o build de produção
 ```
 
+## Briefing (protótipo)
+
+`/briefing` é o protótipo de UX do briefing interativo (checkpoint B2), sem
+backend. Ver [`docs/briefing/README.md`](docs/briefing/README.md).
+
 ## Site legado
 
 A versão anterior do site (HTML/CSS, "3A Interiores") está preservada na tag
